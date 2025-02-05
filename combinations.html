@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Combinations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #003366; /* Dark blue background */
+            color: #d3d3d3; /* White-grey text color */
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-item {
+            margin: 10px;
+            width: 310px; /* Width to accommodate the image and border */
+            box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+        }
+        img {
+            max-width: 100%; /* Adjusted to fit within the container */
+            height: auto;
+            display: block;
+            border: 3px solid #003366; /* Invisible border */
+            transition: border 0.3s ease-in-out; /* Smooth transition for hover effect */
+        }
+        img:hover {
+            border-color: #fef; /* Purple frame on hover */
+        }
+        .caption {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .caption .artist-name {
+            font-weight: bold; /* Bold artist name */
+            color: #ffffff; /* White color for artist name */
+        }
+        .nav-link {
+            color: #ffffff;
+            margin: 20px 0;
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('Copied to clipboard: ' + text);
+        }
+    </script>
+</head>
+<body>
+    <h1>Artist Combinations</h1>
+    <a class="nav-link" href="index.html">Back to Main Page</a>
+    <div class="image-container">
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-alkemanubis, guweiz, khyle, z3zz4, sakimichan, opossumachine_00001_.png" alt="alkemanubis, guweiz, khyle, z3zz4, sakimichan, opossumachine " onclick="copyToClipboard('alkemanubis, guweiz, khyle, z3zz4, sakimichan, opossumachine ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">alkemanubis, guweiz, khyle, z3zz4, sakimichan, opossumachine </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-alkemanubis, guweiz, khyle, z3zz4, sakimichan_00001_.png" alt="alkemanubis, guweiz, khyle, z3zz4, sakimichan " onclick="copyToClipboard('alkemanubis, guweiz, khyle, z3zz4, sakimichan ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">alkemanubis, guweiz, khyle, z3zz4, sakimichan </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-alkemanubis, guweiz, khyle, z3zz4_00001_.png" alt="alkemanubis, guweiz, khyle, z3zz4 " onclick="copyToClipboard('alkemanubis, guweiz, khyle, z3zz4 ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">alkemanubis, guweiz, khyle, z3zz4 </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-alkemanubis, guweiz, khyle_00001_.png" alt="alkemanubis, guweiz, khyle " onclick="copyToClipboard('alkemanubis, guweiz, khyle ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">alkemanubis, guweiz, khyle </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-Aoi_Ogata, wamudraws, alkemanubis, ciloranko_00001_.png" alt="Aoi_Ogata, wamudraws, alkemanubis, ciloranko " onclick="copyToClipboard('Aoi_Ogata, wamudraws, alkemanubis, ciloranko ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">Aoi_Ogata, wamudraws, alkemanubis, ciloranko </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-Aoi_Ogata, wamudraws, alkemanubis_00001_.png" alt="Aoi_Ogata, wamudraws, alkemanubis " onclick="copyToClipboard('Aoi_Ogata, wamudraws, alkemanubis ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">Aoi_Ogata, wamudraws, alkemanubis </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-Aoi_Ogata, wamudraws_00001_.png" alt="Aoi_Ogata, wamudraws " onclick="copyToClipboard('Aoi_Ogata, wamudraws ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">Aoi_Ogata, wamudraws </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-Inkerton-Kun, Rariatto, Zankuro, Bacun, Nac000_00001_.png" alt="Inkerton-Kun, Rariatto, Zankuro, Bacun, Nac000 " onclick="copyToClipboard('Inkerton-Kun, Rariatto, Zankuro, Bacun, Nac000 ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">Inkerton-Kun, Rariatto, Zankuro, Bacun, Nac000 </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-Inkerton-Kun, Rariatto, Zankuro, Bacun_00001_.png" alt="Inkerton-Kun, Rariatto, Zankuro, Bacun " onclick="copyToClipboard('Inkerton-Kun, Rariatto, Zankuro, Bacun ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">Inkerton-Kun, Rariatto, Zankuro, Bacun </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-Inkerton-Kun, Rariatto, Zankuro_00001_.png" alt="Inkerton-Kun, Rariatto, Zankuro " onclick="copyToClipboard('Inkerton-Kun, Rariatto, Zankuro ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">Inkerton-Kun, Rariatto, Zankuro </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="CombinedArtists/Artist-Inkerton-Kun, Rariatto_00001_.png" alt="Inkerton-Kun, Rariatto " onclick="copyToClipboard('Inkerton-Kun, Rariatto ')">
+            <div class="caption">
+                <span class="artist">Artists:</span> <span class="artist-name">Inkerton-Kun, Rariatto </span>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

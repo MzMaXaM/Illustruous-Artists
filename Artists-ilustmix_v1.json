@@ -1,0 +1,792 @@
+{
+  "last_node_id": 23,
+  "last_link_id": 26,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        854.1845703125,
+        99.49858093261719
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 13
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 14
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        156680208700287,
+        "fixed",
+        20,
+        5.95,
+        "euler",
+        "beta",
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -186.67221069335938,
+        102.65010070800781
+      ],
+      "size": [
+        415.8264465332031,
+        98
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            12
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            26
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "Illustrious\\ilustmix_v10.safetensors"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        937.9259643554688,
+        16.09914207458496
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 12,
+      "type": "TextEncode3in1",
+      "pos": [
+        450,
+        150
+      ],
+      "size": [
+        350,
+        310
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 12
+        },
+        {
+          "name": "posTextA",
+          "type": "STRING",
+          "link": 20,
+          "widget": {
+            "name": "posTextA"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Positive Conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            13
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "Negative Conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextEncode3in1"
+      },
+      "widgets_values": [
+        "masterpiece, 4k, high quality, artist: saonserey, Guweiz, Riz, Noriuma.",
+        "1girl, solo, Sakura, pink short hair, green eyes, forehead protector, blushing, looking at viewer, smiling, white dress, green background, gradient background",
+        -2,
+        "worst quality, low quality, text, censored, blurry, (watermark), artist signature, artist name"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "SaveImage",
+      "pos": [
+        1200.362548828125,
+        20.718704223632812
+      ],
+      "size": [
+        574.0443115234375,
+        946.6842041015625
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 23,
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "test/Illustrious"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "Text Multiline",
+      "pos": [
+        400,
+        1040
+      ],
+      "size": [
+        380,
+        160
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "masterpiece, 4k, high quality, artist: moriimee, saonserey, Ilya Kuvshinov, alkemanubis, Guweiz, Riz, Noriuma.\n\n1girl, solo, Sakura, pink short hair, green eyes, forehead protector, blushing, looking at viewer, smiling, white dress, green background, gradient background"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "Text Concatenate",
+      "pos": [
+        -70,
+        280
+      ],
+      "size": [
+        260,
+        142
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 18,
+          "widget": {
+            "name": "text_a"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 19,
+          "widget": {
+            "name": "text_b"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_c"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_d",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_d"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            20,
+            24
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        "",
+        "true",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 17,
+      "type": "Text Multiline",
+      "pos": [
+        -500,
+        280
+      ],
+      "size": [
+        358.5638732910156,
+        139.8948211669922
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            18
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "masterpiece, 4k, high quality, artist: "
+      ]
+    },
+    {
+      "id": 18,
+      "type": "JjkText",
+      "pos": [
+        -390,
+        650
+      ],
+      "size": [
+        280,
+        100
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            19,
+            22
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Artist name",
+      "properties": {
+        "Node name for S&R": "JjkText"
+      },
+      "widgets_values": [
+        "alkemanubis, guweiz, khyle, z3zz4, sakimichan, opossumachine"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "Text Concatenate",
+      "pos": [
+        830,
+        630
+      ],
+      "size": [
+        315,
+        178
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 21,
+          "widget": {
+            "name": "text_a"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 22,
+          "widget": {
+            "name": "text_b"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_c"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_d",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_d"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            23
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        "",
+        "true",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 20,
+      "type": "JjkText",
+      "pos": [
+        590,
+        720
+      ],
+      "size": [
+        210,
+        76
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            21
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JjkText"
+      },
+      "widgets_values": [
+        "test/Artist-"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "JjkShowText",
+      "pos": [
+        210,
+        330
+      ],
+      "size": [
+        220,
+        290
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 24,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JjkShowText"
+      },
+      "widgets_values": [
+        "masterpiece, 4k, high quality, artist:alkemanubis, guweiz, khyle, z3zz4, sakimichan"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "Text Multiline",
+      "pos": [
+        160,
+        710
+      ],
+      "size": [
+        214.40774536132812,
+        496.9237365722656
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Artists",
+      "properties": {
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "moriimee\nsaonserey\nIlya Kuvshinov\nalkemanubis\nGuweiz\nRiz\nNoriuma\nOtohime\nPottsness\nOrushibu\nKoyorin\nHorn/Wood\nHorn Wood\nShexyo\nNyantcha\nClub3\nYoshio\nYoshio (55level)\nNo-kan\nCriis-Chan\nAestheticc-Meme\nKase-Daiki\nKloah\nEu03\nMushi024\nAlp\nPrison School Style\nMagukappu\nKamisimo90\nStarraisins\nJuurouta\nAo Banana\nAogisa\nTakaharu\nNakamura Regura\nGuweiz\nTakaman\nNameo\nKisaragi Nana\nStanley Lau\nKyogoku Shin\nFree Style (yohan1754)\nFree Style\nyohan1754\nOroborus\nSiu0207\nAnato Finnstark\nHan (jackpot)\nHan\nJackpot\nGe-b\nKojima Takeshi\nHu Dako\nMonori Rogue\nMinakami \nflyingman555\nJack Dempa\nSpacezin\nSciamano240\nDikko\nZaphn \nNoriuma\nGoshiki Suzu\nDannex009\nHarris Hero\nCafekun \nMochizuki Kei\nKuya\nhey36253625\nRandomboobguy\nPrywinko\nLazerflip\nMirai Hikari\nAraneesama\nAmano Don\nOda Non\nKyuuba Melo\nAroma Sensei\nGogalking\nWanaata \nDino \ndinoartforame\nMiyamoto Issa\nNat The Lich\nMarumoru\nBlue-Senpai\nSeonoaiko\nNikichen\nHuanxiang Heitu\nDenwa0214\nCirenk\nRatatatat74\nMagister\nLainart\nInudori\nMagion02\nCaburi\nChihunhentai \nKuroi Suna\nLove Cacao\nGreenmarine\nLynus\nAoi Ogata\nAoi_Ogata\nKurowa\nAi-Wa\nSakura No Tomoru Hi E\nAfrobull\nNac000\nFei \nIrohara Mitabi\nIrohara_Mitabi\nKhyle \nBacun\nLuxu\nRariatto \nInkerton-Kun\nHaoni\nHxd\nEigaka\nZankuro\nSei Shoujo\nSakimichan \nDevilhs\nJujunaught \nIzayoi seishin\nIzayoi_seishin\nPicturd\nDjcomps \nPopogori\nOwler\nDmitrys\nningenmame\nciloranko\nshosho_lwlw\ntianliang_duohe_fangdongye\nas109\ncutesexyrobbuts\nrororo\njima\noastlv\nz3zz4\nwamudraws\nhealthyman\nopossumachine"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "SelectLatentSize1MP",
+      "pos": [
+        480,
+        520
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Latent",
+          "type": "LATENT",
+          "links": [
+            25
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SelectLatentSize1MP"
+      },
+      "widgets_values": [
+        "Laptop portrait (768x1216) 8x5",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      12,
+      4,
+      1,
+      12,
+      0,
+      "CLIP"
+    ],
+    [
+      13,
+      12,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      12,
+      1,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      8,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      17,
+      0,
+      16,
+      0,
+      "STRING"
+    ],
+    [
+      19,
+      18,
+      0,
+      16,
+      1,
+      "STRING"
+    ],
+    [
+      20,
+      16,
+      0,
+      12,
+      1,
+      "STRING"
+    ],
+    [
+      21,
+      20,
+      0,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      22,
+      18,
+      0,
+      19,
+      1,
+      "STRING"
+    ],
+    [
+      23,
+      19,
+      0,
+      14,
+      1,
+      "STRING"
+    ],
+    [
+      24,
+      16,
+      0,
+      21,
+      0,
+      "STRING"
+    ],
+    [
+      25,
+      23,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      26,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5644739300537774,
+      "offset": [
+        688.1366653998053,
+        328.14951548509737
+      ]
+    },
+    "ue_links": [],
+    "node_versions": {
+      "comfy-core": "0.3.13",
+      "was-node-suite-comfyui": "056badacda52e88d29d6a65f9509cd3115ace0f2",
+      "ComfyUI-Jjk-Nodes": "b3c99bb78a99551776b5eab1a820e1cd58f84f31",
+      "ComfyUi-MzMaXaM": "654835d73c44dfbaa114f4fb6f929af8a52b7877"
+    },
+    "reroutes": [
+      {
+        "id": 1,
+        "pos": [
+          370,
+          60
+        ],
+        "linkIds": [
+          26
+        ]
+      }
+    ],
+    "linkExtensions": [
+      {
+        "id": 26,
+        "parentId": 1
+      }
+    ]
+  },
+  "version": 0.4
+}
