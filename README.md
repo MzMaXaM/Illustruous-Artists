@@ -24,6 +24,7 @@ To view the images, navigate to the `Images` or `CombinedArtists` folder. Each i
 You can explore the images using the following webpages:
 - [Main Page (index.html)](index.html): Displays individual artist styles.
 - [Combinations Page (combinations.html)](combinations.html): Displays combinations of different artist styles.
+- [GitHub Pages](https://mzmaxam.github.io/Illustruous-Artists/index.html): View the rendered pages.
 
 ## Contributing
 If you'd like to contribute to this collection by adding new styles or improving existing ones, please follow these steps:
