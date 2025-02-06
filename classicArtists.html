@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Artists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #003366; /* Dark blue background */
+            color: #d3d3d3; /* White-grey text color */
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-item {
+            margin: 10px;
+            width: 310px; /* Width to accommodate the image and border */
+            box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+        }
+        img {
+            max-width: 100%; /* Adjusted to fit within the container */
+            height: auto;
+            display: block;
+            border: 3px solid #003366; /* Invisible border */
+            transition: border 0.3s ease-in-out; /* Smooth transition for hover effect */
+        }
+        img:hover {
+            border-color: #fef; /* Purple frame on hover */
+        }
+        .caption {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .caption .artist-name {
+            font-weight: bold; /* Bold artist name */
+            color: #ffffff; /* White color for artist name */
+        }
+        .nav-link {
+            color: #ffffff;
+            margin: 20px 0;
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert('Copied to clipboard: ' + text);
+        }
+    </script>
+</head>
+<body>
+    <h1>Classic Artists</h1>
+    <a class="nav-link" href="index.html">Back to Main Page</a>
+    <a class="nav-link" href="combinations.html">View Artist Combinations</a>
+    <div class="image-container">
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Ai Weiwei_00001_.png" alt="Ai Weiwei " onclick="copyToClipboard('Ai Weiwei ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Ai Weiwei </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Albrecht Dürer_00001_.png" alt="Albrecht Dürer " onclick="copyToClipboard('Albrecht Dürer ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Albrecht Dürer </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Amedeo Modigliani_00001_.png" alt="Amedeo Modigliani " onclick="copyToClipboard('Amedeo Modigliani ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Amedeo Modigliani </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Andreas Gursky_00001_.png" alt="Andreas Gursky " onclick="copyToClipboard('Andreas Gursky ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Andreas Gursky </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Andy Warhol_00001_.png" alt="Andy Warhol " onclick="copyToClipboard('Andy Warhol ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Andy Warhol </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Anish Kapoor_00001_.png" alt="Anish Kapoor " onclick="copyToClipboard('Anish Kapoor ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Anish Kapoor </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Ansel Adams_00001_.png" alt="Ansel Adams " onclick="copyToClipboard('Ansel Adams ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Ansel Adams </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Anselm Kiefer_00001_.png" alt="Anselm Kiefer " onclick="copyToClipboard('Anselm Kiefer ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Anselm Kiefer </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Artemisia Gentileschi_00001_.png" alt="Artemisia Gentileschi " onclick="copyToClipboard('Artemisia Gentileschi ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Artemisia Gentileschi </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Banksy_00001_.png" alt="Banksy " onclick="copyToClipboard('Banksy ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Banksy </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Barbara Hepworth_00001_.png" alt="Barbara Hepworth " onclick="copyToClipboard('Barbara Hepworth ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Barbara Hepworth </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Barbara Kruger_00001_.png" alt="Barbara Kruger " onclick="copyToClipboard('Barbara Kruger ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Barbara Kruger </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Brice Marden_00001_.png" alt="Brice Marden " onclick="copyToClipboard('Brice Marden ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Brice Marden </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Bridget Riley_00001_.png" alt="Bridget Riley " onclick="copyToClipboard('Bridget Riley ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Bridget Riley </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Camille Pissarro_00001_.png" alt="Camille Pissarro " onclick="copyToClipboard('Camille Pissarro ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Camille Pissarro </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Caravaggio_00001_.png" alt="Caravaggio " onclick="copyToClipboard('Caravaggio ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Caravaggio </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Chuck Close_00001_.png" alt="Chuck Close " onclick="copyToClipboard('Chuck Close ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Chuck Close </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Cindy Sherman_00001_.png" alt="Cindy Sherman " onclick="copyToClipboard('Cindy Sherman ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Cindy Sherman </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Claes Oldenburg_00001_.png" alt="Claes Oldenburg " onclick="copyToClipboard('Claes Oldenburg ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Claes Oldenburg </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Claude Monet_00001_.png" alt="Claude Monet " onclick="copyToClipboard('Claude Monet ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Claude Monet </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Cy Twombly_00001_.png" alt="Cy Twombly " onclick="copyToClipboard('Cy Twombly ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Cy Twombly </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Damien Hirst_00001_.png" alt="Damien Hirst " onclick="copyToClipboard('Damien Hirst ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Damien Hirst </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-David Hockney_00001_.png" alt="David Hockney " onclick="copyToClipboard('David Hockney ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">David Hockney </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Diego Rivera_00001_.png" alt="Diego Rivera " onclick="copyToClipboard('Diego Rivera ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Diego Rivera </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Donald Judd_00001_.png" alt="Donald Judd " onclick="copyToClipboard('Donald Judd ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Donald Judd </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Edgar Degas_00001_.png" alt="Edgar Degas " onclick="copyToClipboard('Edgar Degas ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Edgar Degas </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Edouard Manet_00001_.png" alt="Edouard Manet " onclick="copyToClipboard('Edouard Manet ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Edouard Manet </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Edvard Munch_00001_.png" alt="Edvard Munch " onclick="copyToClipboard('Edvard Munch ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Edvard Munch </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Edward Hopper_00001_.png" alt="Edward Hopper " onclick="copyToClipboard('Edward Hopper ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Edward Hopper </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Egon Schiele_00001_.png" alt="Egon Schiele " onclick="copyToClipboard('Egon Schiele ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Egon Schiele </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-El Greco_00001_.png" alt="El Greco " onclick="copyToClipboard('El Greco ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">El Greco </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Francisco Goya_00001_.png" alt="Francisco Goya " onclick="copyToClipboard('Francisco Goya ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Francisco Goya </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Frank Gehry_00001_.png" alt="Frank Gehry " onclick="copyToClipboard('Frank Gehry ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Frank Gehry </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Frank Stella_00001_.png" alt="Frank Stella " onclick="copyToClipboard('Frank Stella ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Frank Stella </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Frida Kahlo_00001_.png" alt="Frida Kahlo " onclick="copyToClipboard('Frida Kahlo ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Frida Kahlo </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-George Grosz_00001_.png" alt="George Grosz " onclick="copyToClipboard('George Grosz ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">George Grosz </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Georges Seurat_00001_.png" alt="Georges Seurat " onclick="copyToClipboard('Georges Seurat ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Georges Seurat </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Georgia O'Keeffe_00001_.png" alt="Georgia O'Keeffe " onclick="copyToClipboard('Georgia O'Keeffe ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Georgia O'Keeffe </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Gerhard Richter_00001_.png" alt="Gerhard Richter " onclick="copyToClipboard('Gerhard Richter ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Gerhard Richter </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Gustav Courbet_00001_.png" alt="Gustav Courbet " onclick="copyToClipboard('Gustav Courbet ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Gustav Courbet </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Gustav Klimt_00001_.png" alt="Gustav Klimt " onclick="copyToClipboard('Gustav Klimt ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Gustav Klimt </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Hans Holbein_00001_.png" alt="Hans Holbein " onclick="copyToClipboard('Hans Holbein ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Hans Holbein </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Helen Frankenthaler_00001_.png" alt="Helen Frankenthaler " onclick="copyToClipboard('Helen Frankenthaler ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Helen Frankenthaler </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Henri Cartier-Bresson_00001_.png" alt="Henri Cartier-Bresson " onclick="copyToClipboard('Henri Cartier-Bresson ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Henri Cartier-Bresson </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Henri Matisse_00001_.png" alt="Henri Matisse " onclick="copyToClipboard('Henri Matisse ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Henri Matisse </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Henri Rousseau_00001_.png" alt="Henri Rousseau " onclick="copyToClipboard('Henri Rousseau ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Henri Rousseau </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Hieronymus Bosch_00001_.png" alt="Hieronymus Bosch " onclick="copyToClipboard('Hieronymus Bosch ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Hieronymus Bosch </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Hiroshige_00001_.png" alt="Hiroshige " onclick="copyToClipboard('Hiroshige ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Hiroshige </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Jackson Pollock_00001_.png" alt="Jackson Pollock " onclick="copyToClipboard('Jackson Pollock ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Jackson Pollock </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Jacob Lawrence_00001_.png" alt="Jacob Lawrence " onclick="copyToClipboard('Jacob Lawrence ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Jacob Lawrence </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-James Whistler_00001_.png" alt="James Whistler " onclick="copyToClipboard('James Whistler ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">James Whistler </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Jan van Eyck_00001_.png" alt="Jan van Eyck " onclick="copyToClipboard('Jan van Eyck ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Jan van Eyck </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Jasper Johns_00001_.png" alt="Jasper Johns " onclick="copyToClipboard('Jasper Johns ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Jasper Johns </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Jean Dubuffet_00001_.png" alt="Jean Dubuffet " onclick="copyToClipboard('Jean Dubuffet ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Jean Dubuffet </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Jean-Michel Basquiat_00001_.png" alt="Jean-Michel Basquiat " onclick="copyToClipboard('Jean-Michel Basquiat ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Jean-Michel Basquiat </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Jeff Koons_00001_.png" alt="Jeff Koons " onclick="copyToClipboard('Jeff Koons ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Jeff Koons </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Jenny Holzer_00001_.png" alt="Jenny Holzer " onclick="copyToClipboard('Jenny Holzer ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Jenny Holzer </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Joan Miró_00001_.png" alt="Joan Miró " onclick="copyToClipboard('Joan Miró ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Joan Miró </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Johannes Vermeer_00001_.png" alt="Johannes Vermeer " onclick="copyToClipboard('Johannes Vermeer ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Johannes Vermeer </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Kara Walker_00001_.png" alt="Kara Walker " onclick="copyToClipboard('Kara Walker ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Kara Walker </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Katsushika Hokusai_00001_.png" alt="Katsushika Hokusai " onclick="copyToClipboard('Katsushika Hokusai ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Katsushika Hokusai </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Keith Haring_00001_.png" alt="Keith Haring " onclick="copyToClipboard('Keith Haring ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Keith Haring </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Kiki Smith_00001_.png" alt="Kiki Smith " onclick="copyToClipboard('Kiki Smith ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Kiki Smith </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Leonardo da Vinci_00001_.png" alt="Leonardo da Vinci " onclick="copyToClipboard('Leonardo da Vinci ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Leonardo da Vinci </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Louise Bourgeois_00001_.png" alt="Louise Bourgeois " onclick="copyToClipboard('Louise Bourgeois ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Louise Bourgeois </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Louise Nevelson_00001_.png" alt="Louise Nevelson " onclick="copyToClipboard('Louise Nevelson ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Louise Nevelson </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Lucian Freud_00001_.png" alt="Lucian Freud " onclick="copyToClipboard('Lucian Freud ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Lucian Freud </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Marc Chagall_00001_.png" alt="Marc Chagall " onclick="copyToClipboard('Marc Chagall ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Marc Chagall </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Marina Abramović_00001_.png" alt="Marina Abramović " onclick="copyToClipboard('Marina Abramović ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Marina Abramović </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Mark Rothko_00001_.png" alt="Mark Rothko " onclick="copyToClipboard('Mark Rothko ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Mark Rothko </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Mary Cassatt_00001_.png" alt="Mary Cassatt " onclick="copyToClipboard('Mary Cassatt ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Mary Cassatt </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Max Ernst_00001_.png" alt="Max Ernst " onclick="copyToClipboard('Max Ernst ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Max Ernst </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Michelangelo_00001_.png" alt="Michelangelo " onclick="copyToClipboard('Michelangelo ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Michelangelo </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Olafur Eliasson_00001_.png" alt="Olafur Eliasson " onclick="copyToClipboard('Olafur Eliasson ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Olafur Eliasson </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Pablo Picasso_00001_.png" alt="Pablo Picasso " onclick="copyToClipboard('Pablo Picasso ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Pablo Picasso </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Paul Cézanne_00001_.png" alt="Paul Cézanne " onclick="copyToClipboard('Paul Cézanne ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Paul Cézanne </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Paul Gauguin_00001_.png" alt="Paul Gauguin " onclick="copyToClipboard('Paul Gauguin ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Paul Gauguin </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Piero della Francesca_00001_.png" alt="Piero della Francesca " onclick="copyToClipboard('Piero della Francesca ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Piero della Francesca </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Pierre-Auguste Renoir_00001_.png" alt="Pierre-Auguste Renoir " onclick="copyToClipboard('Pierre-Auguste Renoir ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Pierre-Auguste Renoir </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Piet Mondrian_00001_.png" alt="Piet Mondrian " onclick="copyToClipboard('Piet Mondrian ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Piet Mondrian </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Rembrandt_00001_.png" alt="Rembrandt " onclick="copyToClipboard('Rembrandt ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Rembrandt </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-René Magritte_00001_.png" alt="René Magritte " onclick="copyToClipboard('René Magritte ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">René Magritte </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Richard Diebenkorn_00001_.png" alt="Richard Diebenkorn " onclick="copyToClipboard('Richard Diebenkorn ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Richard Diebenkorn </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Richard Hamilton_00001_.png" alt="Richard Hamilton " onclick="copyToClipboard('Richard Hamilton ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Richard Hamilton </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Richard Long_00001_.png" alt="Richard Long " onclick="copyToClipboard('Richard Long ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Richard Long </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Richard Serra_00001_.png" alt="Richard Serra " onclick="copyToClipboard('Richard Serra ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Richard Serra </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Robert Rauschenberg_00001_.png" alt="Robert Rauschenberg " onclick="copyToClipboard('Robert Rauschenberg ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Robert Rauschenberg </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Roy Lichtenstein_00001_.png" alt="Roy Lichtenstein " onclick="copyToClipboard('Roy Lichtenstein ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Roy Lichtenstein </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Salvador Dalí_00001_.png" alt="Salvador Dalí " onclick="copyToClipboard('Salvador Dalí ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Salvador Dalí </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Sandro Botticelli_00001_.png" alt="Sandro Botticelli " onclick="copyToClipboard('Sandro Botticelli ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Sandro Botticelli </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Sarah Lucas_00001_.png" alt="Sarah Lucas " onclick="copyToClipboard('Sarah Lucas ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Sarah Lucas </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Sophie Calle_00001_.png" alt="Sophie Calle " onclick="copyToClipboard('Sophie Calle ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Sophie Calle </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Tamara de Lempicka_00001_.png" alt="Tamara de Lempicka " onclick="copyToClipboard('Tamara de Lempicka ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Tamara de Lempicka </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Thomas Kinkade_00001_.png" alt="Thomas Kinkade " onclick="copyToClipboard('Thomas Kinkade ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Thomas Kinkade </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Vincent van Gogh_00001_.png" alt="Vincent van Gogh " onclick="copyToClipboard('Vincent van Gogh ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Vincent van Gogh </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Wassily Kandinsky_00001_.png" alt="Wassily Kandinsky " onclick="copyToClipboard('Wassily Kandinsky ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Wassily Kandinsky </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Yayoi Kusama_00001_.png" alt="Yayoi Kusama " onclick="copyToClipboard('Yayoi Kusama ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Yayoi Kusama </span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Yayoi Kusama_00002_.png" alt="Yayoi Kusama_00002_" onclick="copyToClipboard('Yayoi Kusama_00002_')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Yayoi Kusama_00002_</span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Yayoi Kusama_00003_.png" alt="Yayoi Kusama_00003_" onclick="copyToClipboard('Yayoi Kusama_00003_')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Yayoi Kusama_00003_</span>
+            </div>
+        </div>
+        
+        <div class="image-item">
+            <img src="ClassicArtists/Artist-Zaha Hadid_00001_.png" alt="Zaha Hadid " onclick="copyToClipboard('Zaha Hadid ')">
+            <div class="caption">
+                <span class="artist">Artist:</span> <span class="artist-name">Zaha Hadid </span>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
