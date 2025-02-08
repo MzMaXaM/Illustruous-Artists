@@ -11,6 +11,8 @@ This repository contains a collection of images showcasing different artistic st
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
+![Screenshot](Screenshot%202025-02-08.jpg)
+
 ## Introduction
 This collection serves as a reference for various artistic styles. It can be used for inspiration, comparison, or any other creative purposes.
 
